@@ -64,10 +64,13 @@ spec:
         ports:
         - protocol: TCP
           containerPort: 8080
+          name: sensu-api
         - protocol: TCP
           containerPort: 8081
+          name: sensu-transport
         - protocol: TCP
           containerPort: 3000
+          name: sensu-webui
         volumeMounts:
         - name: sensu-backend-etcd
           mountPath: /var/lib/sensu/etcd

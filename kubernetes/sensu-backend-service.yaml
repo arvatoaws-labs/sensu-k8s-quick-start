@@ -23,7 +23,7 @@ metadata:
 spec:
   selector:
     app: sensu
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - name: sensu-api
     protocol: TCP
