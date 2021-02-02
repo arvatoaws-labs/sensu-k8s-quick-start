@@ -37,7 +37,7 @@ spec:
           optional: true
       containers:
       - name: sensu-backend
-        image: sensu/sensu:5.16.1
+        image: sensu/sensu:6.2.4
         command: [
           "sensu-backend", "start",
           "--log-level=debug",
@@ -86,7 +86,7 @@ spec:
             cpu: 1.0
 
       - name: sensu-agent
-        image: sensu/sensu:5.16.1
+        image: sensu/sensu:6.2.4
         command: ["/opt/sensu/bin/sensu-agent", "start", "--log-level=debug", "--insecure-skip-tls-verify"]
         env:
         - name: SENSU_BACKEND_URL
